@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-color: cadetblue;
+    overflow: hidden;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+}
+.logo {
+    /* background-color: rgba(4, 7, 7, 0.329); */
+    padding: 1rem;
+    color: cadetblue;
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.329);
+    font-size: 3rem;
+}
+
+/* Navigation */
+.header nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 1rem 1rem;
+}
+.header nav ul li {
+    padding-right: 10px;
+}
+/* Feature Contents */
+.featured{
+    background-color: #fff;
+    margin-top: 0.3rem;
+    display: flex;
+    
+}
+
+.featured-slider{
+    background-color: cyan;
+    height: 18rem;
+    width: 30%;
+    margin: 10px;
+}
+/* Genre Select */
+.genres {
+    background-color: #fff;
+    height: 3rem;
+    margin-top: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+.middle{
+    background-color: brown;
+    width: 30%;
+}
+.genres button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.genres button a {
+    text-decoration: none;
+    color: cadetblue;
+}
+/* Scrollable Bars */
+
+.scrollable {
+    background-color: #fff;
+    width: 100%;
+    height: 200px;
+    margin: 5px 0px;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+}
+.scrollable::-webkit-scrollbar {
+    display: none;
+}
+.scroll-item {
+    background-color: cyan;
+    width: 180px;
+    flex-shrink: 0;
+    height: 180px;
+    margin: 0px 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+     
+}
