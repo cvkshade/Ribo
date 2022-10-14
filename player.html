@@ -4,11 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="calamansi.min.css" rel="stylesheet" />
-    <script src="calamansi.min.js"></script>
+    <link href="./player.css" rel="stylesheet" />
+    <script src="./player.js" defer></script>
     <title>Player</title>
 </head>
 <body>
-  <audio id="audio" controls></audio>
+    <h1>MUSIC</h1>
+    <a onclick="playClickedSong('https://www.bensound.org/bensound-music/bensound-summer.mp3')" href="javascript:void(0);">test</a><!--https://www.bensound.org/bensound-music/bensound-ukulele.mp3-->
+    <a onclick="playClickedSong('https://www.bensound.org/bensound-music/bensound-ukulele.mp3')" href="javascript:void(0);">test2</a>
+    <input type="file" accept="audio/*"/>
+    <div id="message"></div>
+    <audio id="music" autoplay="autoplay">
+      Your browser does not support the audio format.
+    </audio> 
+    <div id="audio_player" style="">
+                <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+                <button id='btnReplay' class='replay' title='replay' accesskey="R" onclick='replayAudio();'>Replay</button>	
+                <button id='btnPlayPause' class='play' title='play' accesskey="P" onclick='playPauseAudio();'>Play</button>
+                <button id='btnStop' class='stop' title='stop' accesskey="X" onclick='stopAudio();'>Stop</button>
+          <input type="range" id="volume-bar" title="volume" min="0" max="10" step="1" value="10">
+                <button id='btnMute' class='mute' title='mute' onclick='muteVolume();'>Mute</button>	
+    </div>
+    
+    <br />
+    <br />
+    <hr />
 </body>
 </html>

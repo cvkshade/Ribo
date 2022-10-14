@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
-    <script src="./action.js"></script>
+    <link rel="stylesheet" href="./player.css">
+    <script src="player.js"></script>
     <title>RiBo</title>
 </head>
 
@@ -16,9 +17,47 @@
     <main class="main">
         <header class="header">
             <h1 class="logo">RiBo</h1>
-            <nav>
-                Music Player
-            </nav>
+            <div class="player">
+                <!-- Details         -->
+                <div class="details">
+                    <div class="now-playing"></div>
+                    <div class="album-art"></div>
+                    <div class="song-name"></div>
+                    <div class="track-artist"></div>
+                </div>
+              
+            <!-- The Sliders -->
+            <div class="mediaSliders">
+            <!-- 
+                The Seeker
+             -->
+             <div class="slider-container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek-slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+             </div>
+
+             <!-- Volume -->
+
+             <div class="volume-container">
+                <i  class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+             </div>
+
+            </div>
+              <!-- 
+                     Controls
+                 -->
+
+                 <div class="buttons">
+                    <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+                    <div class="shuffle-track" onclick="shuffleTrack()"><i class="fa fa-shuffle fa-2x"></i></div>
+                    <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+                    <div class="repeat-track" onclick="repeatTrack()"><i class="fa fa-repeat fa-2x"></i></div>
+                    <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+                </div>
+            </div>
         </header>
 
         <div class="wrapper">
@@ -80,44 +119,72 @@
                 <section class="scrollable">
 
                     <div class="scroll-item">
-                        <i class="fa fa-play"></i>
+                        <div class="thumbnails">
+                            <i class="fa fa-play"></i>
+                        </div>
+                        <div class="details">
+                            <p class="songname">Lorem ipsum dolor</p>
+                            <p class="artistName">Lorem Ewwin</p>
+                        </div>
                     </div>
                     <div class="scroll-item">
-                        <i class="fa fa-play"></i>
+                        <div class="thumbnails">
+                            <i class="fa fa-play"></i>
+                        </div>
+                        <div class="details">
+                            <p class="songname">Lorem ipsum dolor</p>
+                            <p class="artistName">Lorem Ewwin</p>
+                        </div>
                     </div>
                     <div class="scroll-item">
-                        <i class="fa fa-play"></i>
+                        <div class="thumbnails">
+                            <i class="fa fa-play"></i>
+                        </div>
+                        <div class="details">
+                            <p class="songname">Lorem ipsum dolor</p>
+                            <p class="artistName">Lorem Ewwin</p>
+                        </div>
                     </div>
                     <div class="scroll-item">
-                        <i class="fa fa-play"></i>
+                        <div class="thumbnails">
+                            <i class="fa fa-play"></i>
+                        </div>
+                        <div class="details">
+                            <p class="songname">Lorem ipsum dolor</p>
+                            <p class="artistName">Lorem Ewwin</p>
+                        </div>
                     </div>
                     <div class="scroll-item">
-                        <i class="fa fa-play"></i>
+                        <div class="thumbnails">
+                            <i class="fa fa-play"></i>
+                        </div>
+                        <div class="details">
+                            <p class="songname">Lorem ipsum dolor</p>
+                            <p class="artistName">Lorem Ewwin</p>
+                        </div>
                     </div>
                     <div class="scroll-item">
-                        <i class="fa fa-play"></i>
+                        <div class="thumbnails">
+                            <i class="fa fa-play"></i>
+                        </div>
+                        <div class="details">
+                            <p class="songname">Lorem ipsum dolor</p>
+                            <p class="artistName">Lorem Ewwin</p>
+                        </div>
                     </div>
                     <div class="scroll-item">
-                        <i class="fa fa-play"></i>
-                    </div>
-                    <div class="scroll-item">
-                        <i class="fa fa-play"></i>
-                    </div>
-                    <div class="scroll-item">
-                        <i class="fa fa-play"></i>
-                    </div>
-                    <div class="scroll-item">
-                        <i class="fa fa-play"></i>
-                    </div>
-                    <div class="scroll-item">
-                        <i class="fa fa-play"></i>
-                    </div>
-                    <div class="scroll-item">
-                        <i class="fa fa-play"></i>
+                        <div class="thumbnails">
+                            <i class="fa fa-play"></i>
+                        </div>
+                        <div class="details">
+                            <p class="songname">Lorem ipsum dolor</p>
+                            <p class="artistName">Lorem Ewwin</p>
+                        </div>
                     </div>
 
 
                 </section>
+             
             </div>
         </div>
     </main>

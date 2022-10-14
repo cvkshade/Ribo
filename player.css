@@ -1,0 +1,96 @@
+.player {
+    background-color: black;
+    color: #fff;
+    width: 44%;
+    display: flex;
+    border: 2px solid white;
+}
+.player i {
+    font-size: 16px;
+}
+/* Details */
+.player .details {
+    display: flex;
+    flex-grow: 1;
+}
+.now-playing{
+    position: absolute;
+    color: black;
+    background-color: beige;
+}
+.song-name{
+    position: absolute;
+    color: #fff;
+    top: 10%;
+    right: 27%;
+}
+.artist{
+    /* background-color: fuchsia; */
+    color: #fff;
+}
+.details .album-art{
+  background-color: cadetblue;
+  height: 90px;
+  width: 90px;
+}
+.buttons i {
+    font-size: 22px;
+    color: cadetblue;
+}
+
+/* Player Buttons */
+.player .buttons {
+    position: absolute;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    top: 5%;
+    right: 4%;
+}
+.mediaSliders{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Track Slider */
+.slider-container{
+   display: flex;
+   position: absolute;
+   right: 2%;
+}
+
+.slider-container input{
+    width: 400px;
+    margin: 0px 3px;
+    
+}
+.volume-container{
+    position: absolute;
+    right: 2%;
+    /* background-color: firebrick; */
+    top: 10%;
+    display: flex;
+}
+.volume-container input{
+    width: 90px;
+    margin: 0px 3px;
+}
+
+/*  Animation */
+
+        .song-name:hover{
+            animation-play-state: paused;
+        }
+ 
+        /* The animation */
+        @keyframes marquee{
+            0%{transform: translateX(100%);}
+            100%{transform: translateX(-100%);}
+        }
+ 
+        @media (prefers-reduced-motion: no-preference) {
+            .song-name{
+                animation: marquee 10s linear infinite;
+            }
+        }
